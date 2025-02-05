@@ -32,7 +32,7 @@ The plugin uses server-side rendering for each of the hidden blocks, so there wo
 <br>
 
 ## Installation
-1. Download the ZIP file.
+1. [Download the ZIP file](https://github.com/damianmuti/dmwpb-hide-blocks/archive/refs/heads/main.zip).
 2. Log into your Wordpress installation, go to `Plugins > Add New Plugin`.
 3. Click on `Upload Plugin` and select the ZIP file you downloaded.
 4. Click `Install Now`.
