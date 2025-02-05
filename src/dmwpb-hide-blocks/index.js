@@ -37,7 +37,6 @@ function addHideAttributes( settings ) {
 
 	return settings;
 }
-
 addFilter(
 	'blocks.registerBlockType',
 	'dmwpb-hide-blocks/add-hide-attributes',
