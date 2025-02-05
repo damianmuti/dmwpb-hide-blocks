@@ -1,0 +1,103 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/dmwpb-hide-blocks/editor.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * #.# Block Editor Styles
+ *
+ * This styles are loaded as a dependency in the Gutenberg Editor only.
+ */
+.dmwpb__panel .components-panel__body-toggle {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.dmwpb__panel .components-panel__body-toggle svg {
+  margin-left: 0;
+  width: 18px;
+}
+.dmwpb__panel .components-panel__row {
+  min-height: unset;
+  margin-top: 15px;
+}
+.dmwpb__panel .components-panel__row:first-of-type {
+  margin-top: 18px;
+}
+.dmwpb__panel .components-base-control__label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+  padding: 0px;
+}
+
+.dmwpb__toolbar-icon {
+  position: relative;
+}
+.dmwpb__toolbar-icon path {
+  fill: #F6635C;
+}
+.dmwpb__toolbar-icon::after {
+  content: attr(data-active-conditions);
+  position: absolute;
+  top: 6px;
+  right: -2px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #6f6f6f;
+  color: white;
+  border-radius: 100%;
+  font-size: 10px;
+  outline: 3px solid white;
+}
+.dmwpb__toolbar-icon[data-active-conditions="0"]::after {
+  display: none;
+}
+
+.block-editor-block-toolbar > .block-editor-block-toolbar__slot:has(.dmwpb__toolbar-icon) {
+  order: -1;
+}
+
+.dmwpb__row--conditions {
+  margin-top: 8px !important;
+  padding: 0 0 0 40px;
+}
+.dmwpb__row--conditions .components-base-control__label {
+  margin-bottom: 0;
+}
+.dmwpb__row--conditions .components-panel__row {
+  margin-top: 10px;
+}
+.dmwpb__row--conditions .components-panel__row:first-of-type {
+  margin-top: 10px;
+}
+.dmwpb__row--conditions .dmwpb__row--label:not(:first-of-type) {
+  margin-top: 18px;
+}
+
+.editor-styles-wrapper [data-hidden] {
+  position: relative;
+  opacity: 0.3;
+  transition: opacity 0.1s ease;
+}
+.editor-styles-wrapper [data-hidden].is-selected, .editor-styles-wrapper [data-hidden].has-child-selected, .editor-styles-wrapper [data-hidden].is-highlighted {
+  position: relative;
+  opacity: 1;
+}
+.editor-styles-wrapper [data-hidden]::before {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  right: -30px;
+  width: 20px;
+  height: 15px;
+  display: block;
+  transform: translateY(-50%);
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM4LjggNS4xQzI4LjQtMy4xIDEzLjMtMS4yIDUuMSA5LjJTLTEuMiAzNC43IDkuMiA0Mi45bDU5MiA0NjRjMTAuNCA4LjIgMjUuNSA2LjMgMzMuNy00LjFzNi4zLTI1LjUtNC4xLTMzLjdMNTI1LjYgMzg2LjdjMzkuNi00MC42IDY2LjQtODYuMSA3OS45LTExOC40YzMuMy03LjkgMy4zLTE2LjcgMC0yNC42Yy0xNC45LTM1LjctNDYuMi04Ny43LTkzLTEzMS4xQzQ2NS41IDY4LjggNDAwLjggMzIgMzIwIDMyYy02OC4yIDAtMTI1IDI2LjMtMTY5LjMgNjAuOEwzOC44IDUuMXpNMjIzIDE0OS41YzQ4LjYtNDQuMyAxMjMtNTAuOCAxNzkuMy0xMS43YzYwLjggNDIuNCA3OC45IDEyMy4yIDQ0LjIgMTg2LjlMNDA4IDI5NC41YzguNC0xOS4zIDEwLjYtNDEuNCA0LjgtNjMuM2MtMTEuMS00MS41LTQ3LjgtNjkuNC04OC42LTcxLjFjLTUuOC0uMi05LjIgNi4xLTcuNCAxMS43YzIuMSA2LjQgMy4zIDEzLjIgMy4zIDIwLjNjMCAxMC4yLTIuNCAxOS44LTYuNiAyOC4zTDIyMyAxNDkuNXptMjIzLjEgMjk4TDgzLjEgMTYxLjVjLTExIDE0LjQtMjAuNSAyOC43LTI4LjQgNDIuMmwzMzkgMjY1LjdjMTguNy01LjUgMzYuMi0xMyA1Mi42LTIxLjh6TTM0LjUgMjY4LjNjMTQuOSAzNS43IDQ2LjIgODcuNyA5MyAxMzEuMUMxNzQuNSA0NDMuMiAyMzkuMiA0ODAgMzIwIDQ4MGMzLjEgMCA2LjEtLjEgOS4yLS4yTDMzLjEgMjQ3LjhjLTEuOCA2LjgtMS4zIDE0IDEuNCAyMC41eiIgZmlsbD0iI0Y2NjM1QyIvPjwvc3ZnPg==) center/cover no-repeat;
+}
+
+/*# sourceMappingURL=index.css.map*/

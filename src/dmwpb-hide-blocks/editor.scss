@@ -1,0 +1,130 @@
+/**
+ * #.# Block Editor Styles
+ *
+ * This styles are loaded as a dependency in the Gutenberg Editor only.
+ */
+
+.dmwpb__panel {
+  .components-panel__body-toggle {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    svg {
+      margin-left: 0;
+      width: 18px;
+    }
+  }
+
+  .components-panel__row {
+    min-height: unset;
+    margin-top: 15px;
+
+    &:first-of-type {
+      margin-top: 18px;
+    }
+  }
+
+  .components-base-control__label {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: calc(8px);
+    padding: 0px;
+  }
+}
+
+.dmwpb__toolbar-icon {
+  position: relative;
+
+  path {
+    fill: #F6635C;
+  }
+
+  // Create a badge to show conditions count.
+  &::after {
+    content: attr(data-active-conditions);
+    position: absolute;
+    top: 6px;
+    right: -2px;
+    display: block;
+    width: 15px;
+    height: 15px;    
+    background-color: #6f6f6f;
+    color: white;
+    border-radius: 100%;
+    font-size: 10px;
+    outline: 3px solid white;
+  }
+
+  // Hide badge if count === 0
+  &[data-active-conditions="0"] {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// Change order for the toolbar menu icon
+.block-editor-block-toolbar {
+  > .block-editor-block-toolbar__slot {
+    &:has(.dmwpb__toolbar-icon) {
+      order: -1;
+    }
+  }
+}
+
+.dmwpb__row--conditions {
+  margin-top: 8px !important;
+  padding: 0 0 0 40px;
+
+  .components-base-control__label {
+    margin-bottom: 0;
+  }
+
+  .components-panel__row {
+    margin-top: 10px;
+
+    &:first-of-type {
+      margin-top: 10px;
+    }
+  }
+
+  .dmwpb__row--label {
+    &:not(:first-of-type) {
+      margin-top: 18px;
+    }
+  }
+}
+
+// Blocks styling
+.editor-styles-wrapper {
+  [data-hidden] {
+    position: relative;
+    opacity: .3;
+    transition: opacity .1s ease;
+
+    &.is-selected,
+    &.has-child-selected,
+    &.is-highlighted {
+      position: relative;
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      right: -30px;
+      width: 20px;
+      height: 15px;
+      display: block;
+      transform: translateY(-50%);
+      background: url(assets/icon.svg) center/cover no-repeat;
+    }
+  }
+}
