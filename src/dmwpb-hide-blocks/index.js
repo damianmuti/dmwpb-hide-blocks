@@ -12,7 +12,7 @@ import './edit';
 
 
 /**
- * Adds a custom 'isDecorative' attribute to all Image blocks.
+ * Add custom hide settings to blocks.
  *
  * @param {Object} settings The block settings for the registered block type.
  * @return {Object}         The modified block settings.
@@ -40,6 +40,6 @@ function addHideAttributes( settings ) {
 
 addFilter(
 	'blocks.registerBlockType',
-	'dmwpb-hide-blocks/add-hide-attribute',
+	'dmwpb-hide-blocks/add-hide-attributes',
 	addHideAttributes
 );

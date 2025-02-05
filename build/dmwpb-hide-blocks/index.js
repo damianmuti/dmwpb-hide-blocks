@@ -531,7 +531,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Adds a custom 'isDecorative' attribute to all Image blocks.
+ * Add custom hide settings to blocks.
  *
  * @param {Object} settings The block settings for the registered block type.
  * @return {Object}         The modified block settings.
@@ -555,7 +555,7 @@ function addHideAttributes(settings) {
   };
   return settings;
 }
-(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.addFilter)('blocks.registerBlockType', 'dmwpb-hide-blocks/add-hide-attribute', addHideAttributes);
+(0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.addFilter)('blocks.registerBlockType', 'dmwpb-hide-blocks/add-hide-attributes', addHideAttributes);
 })();
 
 /******/ })()
