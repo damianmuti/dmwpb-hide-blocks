@@ -21,8 +21,8 @@ if ( !defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( !defined( 'DMWPB_PLUGIN_DIR' ) ) {
-	define( 'DMWPB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+if ( !defined( 'DMWPB_HB_PLUGIN_DIR' ) ) {
+	define( 'DMWPB_HB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 }
 
 /**
@@ -38,15 +38,11 @@ function dmwpb_hide_block_init() {
 	}
 
 	// Include dependencies.
-	require_once( DMWPB_PLUGIN_DIR . 'inc/api.php' );
-	require_once( DMWPB_PLUGIN_DIR . 'inc/render.php' );
+	require_once( DMWPB_HB_PLUGIN_DIR . 'inc/api.php' );
+	require_once( DMWPB_HB_PLUGIN_DIR . 'inc/render.php' );
 
 	// Register block extension
 	register_block_type( __DIR__ . '/build/dmwpb-hide-blocks' );
 	
 }
 add_action( 'init', __NAMESPACE__ . '\dmwpb_hide_block_init' );
-
-
-
-
