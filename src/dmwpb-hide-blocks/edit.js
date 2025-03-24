@@ -27,7 +27,10 @@ import DMWPBChecklistControl from './components/checklist.js';
 import './editor.scss';
 
 
-
+/**
+ * Internal dependencies.
+ */
+import { allowedBlocks, defaultAttributes } from './helpers';
 
 
 /**
@@ -40,6 +43,12 @@ import './editor.scss';
  */
 function addHideInspectorControls( BlockEdit ) {
 	return ( props ) => {
+
+		// If the block is not allowed or has a parent, return the block as-is
+		if ( allowedBlocks.indexOf( props.name ) === -1 ) {
+			return <BlockEdit { ...props } />;
+		}
+
 		const setHideBlock = ( value ) => {
 			props.setAttributes({
 				dmwpb__hideBlock: value
@@ -134,7 +143,7 @@ function addHideInspectorControls( BlockEdit ) {
 											`This block is hidden on the front-end${ activeConditionsCount > 0 ? ' under ' + activeConditionsCount + ( activeConditionsCount === 1 ? ' condition.': ' conditions.' ) : '.' }`, 'dmwpb-hide-block' ) 
 									}
 									data-active-conditions={ activeConditionsCount }
-									className="dmwpb__toolbar-icon"
+									className="dmwpb__toolbar-icon dmwpb__hide-icon"
 									disabled
 								/>
 							) }

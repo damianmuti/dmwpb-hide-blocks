@@ -37,12 +37,8 @@
   }
 }
 
-.dmwpb__toolbar-icon {
+.dmwpb__hide-icon {
   position: relative;
-
-  path {
-    fill: #F6635C;
-  }
 
   // Create a badge to show conditions count.
   &::after {
@@ -53,11 +49,11 @@
     display: block;
     width: 15px;
     height: 15px;    
-    background-color: #6f6f6f;
+    background-color: #D84827;
     color: white;
     border-radius: 100%;
     font-size: 10px;
-    outline: 3px solid white;
+    outline: 2px solid white;
   }
 
   // Hide badge if count === 0

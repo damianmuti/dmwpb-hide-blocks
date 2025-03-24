@@ -5,10 +5,12 @@
  */
 import { addFilter } from '@wordpress/hooks';
 
+
 /**
  * Internal dependencies
  */
 import './edit';
+import { allowedBlocks, defaultAttributes } from './helpers';
 
 
 /**
@@ -17,22 +19,17 @@ import './edit';
  * @param {Object} settings The block settings for the registered block type.
  * @return {Object}         The modified block settings.
  */
-function addHideAttributes( settings ) {
+function addHideAttributes( settings, name ) {
+
+	// If the block is not allowed, return the settings as-is
+	if ( allowedBlocks.indexOf( name ) === -1 ) {
+		return settings;
+	}
+
 	// Add settings for all blocks.
 	settings.attributes = {
 		...settings.attributes,
-		dmwpb__hideBlock: {
-			type: 'boolean',
-			default: false,
-		},
-		dmwpb__hideBlockHasConditions: {
-			type: 'boolean',
-			default: false,
-		},
-		dmwpb__hideBlockConditions: {
-			type: 'array',
-			default: '',
-		},
+		...defaultAttributes
 	};
 
 	return settings;
