@@ -1,8 +1,10 @@
+![Image header](https://damianmuti.com/external/template2.png)
+
+<br>
+
 # [DMWPB] Hide Blocks
 
 This Wordpress plugin extends Gutenberg core blocks to allow Administrators to hide elements on the front-end but keep them in the post edit screen under certain conditions.
-
-<br>
 
 ## F.A.Q
 
@@ -22,14 +24,12 @@ No. Since managing content can sometimes be tricky, the plugin is restricted to 
 
 The plugin uses server-side rendering for each of the hidden blocks, so there won't be any issues upon deactivating it.
 
-<br>
 
 ## Requirements
 
 - Requires at least: 6.7+
 - Requires PHP: 7.4+
 
-<br>
 
 ## Installation
 1. [Download the ZIP file](https://github.com/damianmuti/dmwpb-hide-blocks/archive/refs/heads/main.zip).
